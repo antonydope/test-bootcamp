@@ -22,4 +22,6 @@ is closed after the response is delivered.
     each request from a client to a server is treated as an independent transaction. To maintain state across 
 multiple requests, technologies like cookies or sessions are often employed.
 
+more...
+
 
