@@ -1,12 +1,19 @@
 package main
 
-import "fmt"
-
+import ("fmt"
+"math/rand"
+"time"
+)
+func doWork()int{
+	time.Sleep(time.Second)
+	return rand.Intn(100)
+}
 func main(){
 myChan := make(chan int)
 go func(){
 	for i := 0; i < 1000; i++{
-		myChan <- i
+		result := doWork()
+		myChan <- result
 	}
 	close(myChan)
 	//myChan <- 456
